@@ -29,15 +29,12 @@ function Card({ modal, note }) {
   };
 
   return (
-    <div className="">
-      <div
-        className=" relative bg-yellow-300 xl:w-72    md:w-72 sm:w-40  shadow-lg  md:h-48 h-fit rounded-md px-5 py-4 mb-4     hover:bg-white transition duration-500   "
-        
-      >
-        <h3 className="border-b border-slate-700 text-emerald-600 w-20 min-w-fit  px-2 font-semibold mb-4 ">
+    <div className=" ">
+      <div className=" relative bg-yellow-300 xl:w-72  md:w-72 sm:w-40  shadow-lg  md:h-48 h-fit rounded-md px-5 py-4 mb-4     hover:bg-white transition duration-500   ">
+        <h3 className="border-b border-slate-700 text-emerald-600 w-20 min-w-fit  px-2 font-semibold mb-4 select-text">
           {note.title}
         </h3>
-        <p className="text-slate-800 font-normal  md:h-10 mb-10">
+        <p className="text-slate-800 font-normal  md:h-10 mb-10 select-text cursor-pointer">
           {note.content && note.content.substr(0, 50) + "..."}
 
           <span
@@ -58,7 +55,7 @@ function Card({ modal, note }) {
               onClick={handleDelete}
             />
           </div>
-          <small className="text-slate-900 text-xs">
+          <small className="text-slate-900 text-xs select-text ">
             Last-Modified:{" "}
             {new Date(note.lastModified).toLocaleDateString("en-GB", {
               hour: "2-digit",
