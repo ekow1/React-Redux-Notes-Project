@@ -33,7 +33,9 @@ function Header() {
   return (
     <div className=" container  mx-auto px-5 mb-10 flex flex-row flex-wrap justify-center items-center mt-10 gap-5  w-full h-full">
       <div className=" relative  mt-2 px-5 flex justify-around gap-20  w-96">
-        <h2 className="mt-4 md:text-3xl text-2xl font-bold text-emerald-600" >Add Notes</h2>
+        <h2 className="mt-4 md:text-3xl text-2xl font-bold text-emerald-600">
+          Add Notes
+        </h2>
         <div className=" cursor-pointer" onClick={() => setShowModal(true)}>
           <i className="bx bxs-plus-square self-baseline text-3xl font-bold mt-5 text-emerald-600 bx-tada-hover"></i>
         </div>
@@ -42,10 +44,8 @@ function Header() {
       {showModal ? (
         <>
           <motion.div
-
-           initial={{ opacity: 0 }}
-           animate={{ opacity: 1 }}
-
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none  transition
             ease-in-out"
           >
@@ -91,6 +91,7 @@ function Header() {
                     ease-in-out
                     m-0
                     focus:text-emerald-600 focus:outline-none focus:ring-0
+                      scrollbar scrollbar-thumb-slate-600 scrollbar-track-yellow-400
                 "
                     id="exampleFormControlTextarea1"
                     rows="6"

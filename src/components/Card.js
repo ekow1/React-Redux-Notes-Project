@@ -87,7 +87,7 @@ function Card({ modal, note }) {
                     </button>
                   </div>
                   {/*body*/}
-                  <div className="relative p-6 flex-auto text-center">
+                  <div className="relative p-6 flex-auto text-center ">
                     <input
                       type="text"
                       id="simple-email"
@@ -114,6 +114,7 @@ function Card({ modal, note }) {
                     ease-in-out
                     m-0
                     focus:text-emerald-600  focus:outline-none focus:ring-0
+                     scrollbar scrollbar-thumb-slate-600 scrollbar-track-yellow-400
                 "
                       id="exampleFormControlTextarea1"
                       rows="6"

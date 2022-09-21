@@ -21,9 +21,9 @@ function CardDetails({ note }) {
           >
             <div className="relative lg:w-5/12 md:5/12 w-80 my-6 mx-auto  ">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col justify-center lg:h-96  overflow-x-hidden overflow-y-auto  bg-yellow-400 outline-none focus:outline-none">
+              <div className=" relative border-0 rounded-lg shadow-lg relative flex flex-col justify-center    bg-yellow-400 outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 bg-emerald-600 border-b border-solid border-yellow-400 ">
+                <div className=" flex items-start justify-between p-5 bg-emerald-600 border-b border-solid border-yellow-400 ">
                   <h3 className="text-3xl font-semibold text-yellow-400">
                     {note.title}
                   </h3>
@@ -35,7 +35,7 @@ function CardDetails({ note }) {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto h-72 text-emerald-600">
+                <div className="relative p-6 flex-auto h-72 text-emerald-600 overflow-x-hidden overflow-y-auto  scrollbar scrollbar-thumb-slate-600 scrollbar-track-yellow-400">
                   {note.content}
                 </div>
                 {/*footer*/}
