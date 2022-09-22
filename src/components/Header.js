@@ -65,11 +65,11 @@ function Header() {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto text-center">
+                <div className="relative py-6 px-4 flex-auto text-center">
                   <input
                     type="text"
                     id="simple-email"
-                    className=" flex-1 appearance-none border-b border-sky-800  focus:outline-none  focus:ring-0   py-2 px-4  text-sky-900 placeholder-sky-900 bg-transparent md:w-72 w-fit h-fit mb-4"
+                    className=" flex-1 appearance-none border-b border-sky-800  focus:outline-none  focus:ring-0   py-2 text-sky-900 placeholder-sky-900 bg-transparent lg:w-96 w-fit h-fit mb-4"
                     placeholder="title here ..."
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
