@@ -30,11 +30,14 @@ function Card({ modal, note }) {
 
   return (
     <div className=" ">
-      <div className=" relative bg-yellow-300 xl:w-72  md:w-72 sm:w-40  shadow-lg  md:h-48 h-fit rounded-md px-5 py-4 mb-4     hover:bg-white transition duration-500   ">
+      <div className=" relative bg-yellow-300 xl:w-80  md:w-80 w-80  shadow-lg  md:h-48 h-fit rounded-md px-5 py-4 mb-4     hover:bg-white transition duration-500   ">
         <h3 className="border-b border-slate-700 text-emerald-600 w-20 min-w-fit  px-2 font-semibold mb-4 select-text">
           {note.title}
         </h3>
-        <p className="text-slate-800 font-normal  md:h-10 mb-10 select-text cursor-pointer">
+        <p
+          className="text-slate-800 font-normal  md:h-10 h-10 mb-10 select-text cursor-pointer "
+          onClick={modal}
+        >
           {note.content && note.content.substr(0, 50) + "..."}
 
           <span
@@ -71,9 +74,9 @@ function Card({ modal, note }) {
               className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none  transition
             ease-in-out"
             >
-              <div className="relative lg:w-5/12 my-6 mx-auto  w-fit">
+              <div className="relative lg:w-5/12 my-6 mx-auto w-96 ">
                 {/*content*/}
-                <div className="border-0 rounded-lg shadow-lg relative flex flex-col justify-center md:w-full  h-fit md:h-full  bg-yellow-400 outline-none focus:outline-none">
+                <div className="border-0 rounded-lg shadow-lg relative flex flex-col justify-center md:w-full  h-fit md:h-full sm:w-96 bg-yellow-400 outline-none focus:outline-none">
                   {/*header*/}
                   <div className="flex items-start justify-between p-5 bg-emerald-600 rounded-t">
                     <h3 className="text-3xl font-semibold text-yellow-400">
