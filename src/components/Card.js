@@ -30,24 +30,24 @@ function Card({ modal, note }) {
 
   return (
     <div className=" ">
-      <div className=" relative bg-yellow-300 xl:w-80  md:w-80 w-80  shadow-lg  md:h-48 h-fit rounded-md px-5 py-4 mb-4     hover:bg-white transition duration-500   ">
-        <h3 className="border-b border-slate-700 text-emerald-600 w-20 min-w-fit  px-2 font-semibold mb-4 select-text">
-          {note.title}
+      <div className=" relative bg-white xl:w-80  md:w-80 w-80  shadow-lg  md:h-48 h-fit rounded-md px-5 py-4 mb-4     hover:bg-yellow-300 transition duration-500   ">
+        <h3 className="border-b border-slate-700 text-sky-800 w-20 min-w-fit  px-2 font-semibold mb-4 select-text">
+          {note.title.length >= 10 ?  note.title.substr(0, 25) + "..." : note.title}
         </h3>
         <p
-          className="text-slate-800 font-normal  md:h-10 h-10 mb-10 select-text cursor-pointer "
+          className="text-sky-900 font-normal  md:h-10 h-10 mb-10 select-text cursor-pointer "
           onClick={modal}
         >
           {note.content && note.content.substr(0, 50) + "..."}
 
           <span
-            className="text-sm text-emerald-600  cursor-pointer"
+            className="text-sm text-sky-900  cursor-pointer"
             onClick={modal}
           >
             more
           </span>
         </p>
-        <div className="relative flex items-center justify-between mt-12 gap-1 cursor-pointer  text-emerald-600  ">
+        <div className="relative flex items-center justify-between mt-12 gap-1 cursor-pointer  text-sky-900  ">
           <div className="">
             <i
               className="bx bxs-edit  bx-tada-hover"
@@ -58,7 +58,7 @@ function Card({ modal, note }) {
               onClick={handleDelete}
             />
           </div>
-          <small className="text-slate-900 text-xs select-text ">
+          <small className="text-sky-900 text-xs select-text ">
             Last-Modified:{" "}
             {new Date(note.lastModified).toLocaleDateString("en-GB", {
               hour: "2-digit",
@@ -76,25 +76,25 @@ function Card({ modal, note }) {
             >
               <div className="relative lg:w-5/12 my-6 mx-auto w-96 ">
                 {/*content*/}
-                <div className="border-0 rounded-lg shadow-lg relative flex flex-col justify-center md:w-full  h-fit md:h-full sm:w-96 bg-yellow-400 outline-none focus:outline-none">
+                <div className="border-0 rounded-lg shadow-lg relative flex flex-col  md:w-full  h-fit md:h-full sm:w-96 bg-white outline-none focus:outline-none">
                   {/*header*/}
-                  <div className="flex items-start justify-between p-5 bg-emerald-600 rounded-t">
-                    <h3 className="text-3xl font-semibold text-yellow-400">
+                  <div className="flex items-start justify-between p-5 bg-sky-800 rounded-t">
+                    <h3 className="text-3xl font-semibold text-white">
                       edit note
                     </h3>
                     <button
                       className="p-1 ml-auto  border-0 text-black  "
                       onClick={() => setShowModal(false)}
                     >
-                      <i className="bx bxs-x-circle text-2xl text-yellow-400 bx-burst-hover "></i>
+                      <i className="bx bxs-x-circle text-2xl text-white bx-burst-hover "></i>
                     </button>
                   </div>
                   {/*body*/}
-                  <div className="relative p-6 flex-auto text-center ">
+                  <div className="relative py-6 flex-auto items-center  w-full px-4">
                     <input
                       type="text"
                       id="simple-email"
-                      className=" flex-1 appearance-none border-b border-emerald-600  focus:outline-none focus:ring-0   py-2 px-4  text-emerald-600 placeholder-emerald-600 bg-transparent md:w-80 w-fit mb-4"
+                      className=" flex-1 appearance-none wrap border-b border-sky-900  focus:outline-none focus:ring-0   py-2 px-4  text-sky-900  bg-transparent lg:w-full w-full h-fit mb-4"
                       placeholder="title here ..."
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
@@ -109,18 +109,18 @@ function Card({ modal, note }) {
                     py-1.5
                     text-base
                     font-normal 
-                    text-emerald-600
+                    text-sky-900
                     bg-transparent bg-clip-padding
                     
                     placeholder-emerald-600
                     transition
                     ease-in-out
                     m-0
-                    focus:text-emerald-600  focus:outline-none focus:ring-0
-                     scrollbar scrollbar-thumb-slate-600 scrollbar-track-yellow-400
+                    focus:text-sky-900  focus:outline-none focus:ring-0
+                     scrollbar scrollbar-thumb-sky-900 scrollbar-white
                 "
                       id="exampleFormControlTextarea1"
-                      rows="6"
+                      rows="10"
                       placeholder="Notes here..."
                       value={content}
                       onChange={(e) => setContent(e.target.value)}
@@ -132,7 +132,7 @@ function Card({ modal, note }) {
                     className="flex items-center justify-end p-6  rounded-b md:h-fit h-20 "
                     onClick={handleModal}
                   >
-                    <i className="bx bxs-save font-bold md:text-3xl text-2xl bx-tada-hover text-emerald-600"></i>
+                    <i className="bx bxs-save font-bold md:text-3xl text-2xl bx-tada-hover text-sky-900"></i>
                   </button>
                 </div>
               </div>

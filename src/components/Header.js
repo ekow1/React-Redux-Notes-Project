@@ -33,11 +33,11 @@ function Header() {
   return (
     <div className=" container  mx-auto px-5 mb-10 flex flex-row flex-wrap justify-center items-center mt-10 gap-5  w-full h-full">
       <div className=" relative  mt-2 px-5 flex justify-around gap-20  w-96">
-        <h2 className="mt-4 md:text-3xl text-2xl font-bold text-emerald-600">
+        <h2 className="mt-4 md:text-3xl text-2xl font-bold text-white">
           Add Notes
         </h2>
         <div className=" cursor-pointer" onClick={() => setShowModal(true)}>
-          <i className="bx bxs-plus-square self-baseline text-3xl font-bold mt-5 text-emerald-600 bx-tada-hover"></i>
+          <i className="bx bxs-plus-square self-baseline text-3xl font-bold mt-5 text-white bx-tada-hover"></i>
         </div>
       </div>
 
@@ -51,17 +51,17 @@ function Header() {
           >
             <div className="relative lg:w-5/12  my-6 mx-auto  w-fit">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col md:w-full w-72 h-fit md:h-full  bg-yellow-400 outline-none focus:outline-none">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col md:w-full w-80 h-fit md:h-full  bg-white outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 bg-emerald-600  rounded-t">
-                  <h3 className="text-3xl font-semibold text-yellow-400">
+                <div className="flex items-start justify-between p-5 bg-sky-800  rounded-t">
+                  <h3 className="text-3xl font-semibold text-white">
                     new note
                   </h3>
                   <button
                     className="p-1 ml-auto  border-0 text-black  "
                     onClick={() => setShowModal(false)}
                   >
-                    <i className="bx bxs-x-circle text-2xl text-yellow-400 bx-tada-hover"></i>
+                    <i className="bx bxs-x-circle text-2xl text-white bx-tada-hover"></i>
                   </button>
                 </div>
                 {/*body*/}
@@ -69,7 +69,7 @@ function Header() {
                   <input
                     type="text"
                     id="simple-email"
-                    className=" flex-1 appearance-none border-b border-emerald-600  focus:outline-none  focus:ring-0   py-2 px-4  text-emerald-600 placeholder-emerald-600 bg-transparent md:w-72 w-fit mb-4"
+                    className=" flex-1 appearance-none border-b border-sky-800  focus:outline-none  focus:ring-0   py-2 px-4  text-sky-900 placeholder-sky-900 bg-transparent md:w-72 w-fit h-fit mb-4"
                     placeholder="title here ..."
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
@@ -83,15 +83,15 @@ function Header() {
                     py-1.5
                     text-base
                     font-normal 
-                    text-emerald-600
+                    text-sky-900
                     bg-transparent bg-clip-padding
       
-                    placeholder-emerald-600
+                    placeholder-sky-800
                     transition
                     ease-in-out
                     m-0
-                    focus:text-emerald-600 focus:outline-none focus:ring-0
-                      scrollbar scrollbar-thumb-slate-600 scrollbar-track-yellow-400
+                    focus:text-sky-900 focus:outline-none focus:ring-0
+                      scrollbar scrollbar-thumb-sky-900 scrollbar-track-white
                 "
                     id="exampleFormControlTextarea1"
                     rows="6"
@@ -106,7 +106,7 @@ function Header() {
                   className="flex items-center justify-end p-6  rounded-b md:h-fit h-20"
                   onClick={handleModal}
                 >
-                  <i className="bx bxs-save font-bold md:text-3xl text-2xl bx-tada-hover text-emerald-600"></i>
+                  <i className="bx bxs-save font-bold md:text-3xl text-2xl bx-tada-hover text-sky-900"></i>
                 </button>
               </div>
             </div>
