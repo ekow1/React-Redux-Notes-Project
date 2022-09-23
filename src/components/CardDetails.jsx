@@ -37,7 +37,7 @@ function CardDetails({ note }) {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto h-72 text-sky-800 overflow-x-hidden overflow-y-auto  scrollbar scrollbar-thumb-slate-600 scrollbar-track-yellow-400">
+                <div className="relative p-6 flex-auto h-72 text-sky-800 overflow-x-hidden overflow-y-auto  scrollbar scrollbar-thumb-sky-900 scrollbar-track-white">
                   {note.content}
                 </div>
                 {/*footer*/}
