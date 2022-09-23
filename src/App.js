@@ -11,7 +11,7 @@ function App() {
     return state;
   });
   const filterNote = notes.filter((note) =>
-    note.title.toLowerCase().includes(query.toLowerCase())
+    note.title.toLowerCase().includes(query.toLowerCase()) 
   );
   return (
     <div className="container mx-auto pb-5  px-2   w-full min-h-full   ">

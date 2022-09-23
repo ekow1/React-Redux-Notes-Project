@@ -14,7 +14,8 @@ function Card({ modal, note }) {
     e.preventDefault();
     let editNote = { id: note.id, title, content, lastModified: Date.now() };
 
-    if (note.title !== title || note.content !== content) {
+   
+    if ((note.title !== title || note.content !== content)&&(title !== '' && content.lemgth !== '')) {
       dispatch(updateNote(editNote));
     }
 
@@ -112,7 +113,7 @@ function Card({ modal, note }) {
                     text-sky-900
                     bg-transparent bg-clip-padding
                     
-                    placeholder-emerald-600
+                    placeholder-sky-900
                     transition
                     ease-in-out
                     m-0
@@ -131,6 +132,7 @@ function Card({ modal, note }) {
                     type="submit"
                     className="flex items-center justify-end p-6  rounded-b md:h-fit h-20 "
                     onClick={handleModal}
+                    
                   >
                     <i className="bx bxs-save font-bold md:text-3xl text-2xl bx-tada-hover text-sky-900"></i>
                   </button>
