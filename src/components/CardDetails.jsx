@@ -25,7 +25,9 @@ function CardDetails({ note }) {
                 {/*header*/}
                 <div className=" flex items-start justify-between p-5 bg-sky-800 ">
                   <h3 className="text-3xl font-semibold text-white">
-                    {note.title.substr(0, 50) + "..."}
+                    {note.title.length >= 10
+                      ? note.title.substr(0, 25) + "..."
+                      : note.title}
                   </h3>
                   <button
                     className="p-1 ml-auto  border-0 text-emerald-600  "

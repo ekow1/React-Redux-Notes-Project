@@ -31,24 +31,24 @@ function Card({ modal, note }) {
 
   return (
     <div className=" ">
-      <div className=" relative bg-white xl:w-80  md:w-80 w-80  shadow-lg  md:h-48 h-fit rounded-md px-5 py-4 mb-4     hover:bg-yellow-300 transition duration-500   ">
+      <div className=" relative bg-white xl:w-80  md:w-80 w-80  shadow-lg  md:h-52 h-fit rounded-md px-5 py-4 mb-4     hover:bg-yellow-300 transition duration-500   ">
         <h3 className="border-b border-slate-700 text-sky-800 w-20 min-w-fit  px-2 font-semibold mb-4 select-text">
           {note.title.length >= 10 ?  note.title.substr(0, 25) + "..." : note.title}
         </h3>
         <p
-          className="text-sky-900 font-normal  md:h-10 h-10 mb-10 select-text cursor-pointer "
+          className="text-sky-900 font-normal  md:h-14 h-10 mb-10 select-text cursor-pointer "
           onClick={modal}
         >
-          {note.content && note.content.substr(0, 50) + "..."}
+          {note.content.length >= 100 ?  note.content.substr(0, 90) + "..." : note.content +" "}
 
-          <span
-            className="text-sm text-sky-900  cursor-pointer"
+          <button
+            className="text-sm text-center text-white  cursor-pointer bg-sky-900 px-1 rounded-sm"
             onClick={modal}
           >
-            more
-          </span>
+           <p>view more</p>
+          </button>
         </p>
-        <div className="relative flex items-center justify-between mt-12 gap-1 cursor-pointer  text-sky-900  ">
+        <div className="relative flex items-center justify-between mt-14 gap-1 cursor-pointer  text-sky-900  ">
           <div className="">
             <i
               className="bx bxs-edit  bx-tada-hover"
